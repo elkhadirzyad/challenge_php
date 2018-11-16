@@ -1,0 +1,17 @@
+
+
+        <div class="well">
+            <ul class="nav nav-list">
+                
+                <li class="nav-header">Nos produits</li>
+                {% for cat in cats %}
+                
+             
+                <li class="">
+                    <a href="{{ path('category_id',{'id':cat.id})}}">{{ cat.name }}</a>
+                </li>
+                {% endfor %}
+                
+            </ul>
+        </div>
+    
