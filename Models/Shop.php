@@ -31,6 +31,22 @@ class Shop extends db {
 
     }
 
+    public function get_info($id)
+	{
+
+        // select shops by distance
+
+		$sel=$this->db->prepare("SELECT * from shop where id='$id'");
+
+        $sel->execute();
+
+        return ($sel->fetchAll(PDO::FETCH_ASSOC));
+		
+
+
+
+    }
+
     public function get_prefered_list($user_id)
 	{
 

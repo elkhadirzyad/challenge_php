@@ -18,7 +18,7 @@ $(document).ready(function(){
 			success: function (data)
 			{
 
-            $(".thumbnails").html(data);
+            $("#more_info").html(data);
 
 			}
 

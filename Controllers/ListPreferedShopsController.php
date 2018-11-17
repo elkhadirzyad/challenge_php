@@ -17,6 +17,8 @@ $user_id=$_SESSION['id'];
 
 $shops=$conn->get_prefered_list($user_id);
 
+
+
 foreach ($shops as $p) {
 
 $id_shop=$p['id'];
@@ -47,7 +49,7 @@ $description=$p['description'];
 }
               
 
-            
+          
 
 
             

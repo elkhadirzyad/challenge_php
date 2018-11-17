@@ -28,23 +28,29 @@ $description=$p['description'];
  <div class="thumbnail">
  <div id="name" style=" margin-bottom: 10px;"><h4 style="margin-left: 100px;">'.$name.'</h4> </div>
      <img src="img/holder.png" alt="DevAndClick" width="300" height="300">';
+
+     $data=$data.'<div class="caption">';
+
+    $data=$data.'<a class="btn btn-danger" onClick="moreInfo('.$id_shop.')">More info</a>';
      if (isset ($_SESSION['login']))
 {
    
-    $data=$data.'<div class="caption">';
+    
 
       if ($likedShop->exist_like_shop($id_shop,$_SESSION['id'])==0)
 
-      $data=$data.'<div id="contain_like_dislike'.$id_shop.'"><a class="btn btn-primary" id="like'.$id_shop.'" onClick="likeOrDislike('.$id_shop.')">Like</a></div>';
+      $data=$data.'<div style="float:right" id="contain_like_dislike'.$id_shop.'"><a class="btn btn-primary" id="like'.$id_shop.'" onClick="likeOrDislike('.$id_shop.')">Like</a></div>';
       
       else
 
-      $data=$data.'<div id="contain_like_dislike'.$id_shop.'"><a class="btn btn-success" id="dislike'.$id_shop.'" onClick="likeOrDislike('.$id_shop.')">Dislike</a></div>';
+      $data=$data.'<div style="float:right" id="contain_like_dislike'.$id_shop.'"><a class="btn btn-success" id="dislike'.$id_shop.'" onClick="likeOrDislike('.$id_shop.')">Dislike</a></div>';
 
-     // $data=$data.'<a class="btn btn-success" href="/ecommerce/product_info/1">more info</a>';
+     
+     
         
-      $data=$data.'</div>';
+    
 }
+$data=$data.'</div>';
 $data=$data.'</div></li>';
 
 }
