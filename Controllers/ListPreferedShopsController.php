@@ -17,7 +17,7 @@ $user_id=$_SESSION['id'];
 
 $shops=$conn->get_prefered_list($user_id);
 
-
+$data=$data. '<ul class="thumbnails">';
 
 foreach ($shops as $p) {
 
@@ -49,7 +49,7 @@ $description=$p['description'];
 }
               
 
-          
+$data=$data. '</ul>';          
 
 
             
